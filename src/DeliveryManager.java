@@ -1,8 +1,13 @@
 
 import java.util.ArrayList;
 import java.util.List;
+//Update DeliveryManager to Implement Runnable:
+//
 
-public class DeliveryManager {
+//    Modify the class to implement the Runnable interface.
+//    Complete the run() method so it sorts and prints package inventories.
+
+public class DeliveryManager implements Runnable {
 
     public List<WarehousePackage> incomingPackages;
     public List<WarehousePackage> additionalProcessing;
@@ -19,8 +24,11 @@ public class DeliveryManager {
     /**
      * Code to be run on thread start. (Needs to be completed.)
      */
+    //Complete the run() method so it sorts and prints package inventories.
     public void run() {
         System.out.println("DeliveryManager thread started.");
+        sortShipment();
+        printInventory();
 
     }
 
